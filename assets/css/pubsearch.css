@@ -1,0 +1,314 @@
+/* pubsearch.css - with stronger specificity */
+#main #publications-root {
+  margin: 1rem 0 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+#main #publications-root .search-container {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+#main #publications-root .search-input {
+  width: 100% !important;
+  padding: 0.4rem 1rem 0.4rem 2rem !important;
+  border: 1px solid #101011 !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.8rem !important;
+  line-height: normal !important;
+  height: auto !important;
+  background: white !important;
+  font-family: inherit !important;
+}
+
+#main #publications-root .theme-filters {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.25rem !important;
+  margin: 0.5rem 0 !important;
+}
+
+#main #publications-root .theme-button {
+  padding: 0.2rem 0.4rem !important;
+  font-size: 0.7rem !important;
+  border-radius: 0.25rem !important;
+  border: none !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  background: #f3f4f6 !important;
+  color: #4b5563 !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  letter-spacing: normal !important;
+  height: auto !important;
+}
+
+#main #publications-root .theme-button.selected {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+#main #publications-root .publication-card {
+  padding: 0.3rem !important; /* Reduce padding to tighten card content */
+  padding-bottom: 0.1rem !important; 
+  border: 2px solid #4b5563 !important; /* Stronger border around the card */
+  border-radius: 0.5rem !important; /* Rounder corners */
+  margin: 0.25rem 0 !important; /* Reduced space between cards */
+  font-family: inherit !important;
+  transition: all 0.3s ease !important; /* Smooth transition for hover effects */
+  position: relative; /* Position relative for absolute year */
+}
+
+/* Hover effect for the publication card */
+#main #publications-root .publication-card:hover {
+  border: 2px solid #3b82f6 !important; /* Blue border on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Subtle shadow on hover */
+  transform: scale(1.02) !important; /* Slightly enlarge the card for emphasis */
+}
+
+/* Focus style for accessibility */
+#main #publications-root .publication-card:focus {
+  border: 2px solid #3b82f6 !important; /* Same as hover border */
+  outline: none !important; /* Remove default outline */
+}
+
+#main #publications-root .publication-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 0.3rem !important; /* Reduced gap between elements in header */
+  margin: 0 !important;
+}
+
+/* Reduce line spacing for compact text */
+#main #publications-root .publication-title {
+  font-size: 1rem !important;  /* Title size stays the same */
+  margin: 0 !important;
+  line-height: 1.2 !important;   /* Reduce line height for tighter spacing */
+  font-weight: bold !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-family: inherit !important;
+}
+
+#main #publications-root .publication-authors {
+  font-size: 1.0rem !important; /* Slightly larger font size for authors */
+  margin: 0 !important;         /* Remove margin between title and authors */
+  color: #000000 !important;
+  font-family: inherit !important;
+  line-height: 1.2 !important;   /* Tighten line spacing for authors */
+}
+
+/* Make journal name more pronounced and cursive */
+#main #publications-root .publication-journal {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-top: 0.3rem !important;
+  margin-bottom: 0 !important; /* Remove bottom margin */
+  color: #1f2937 !important;
+  font-style: italic !important; /* Add cursive (italic) style */
+}
+
+/* Reducing the space between meta and header */
+#main #publications-root .publication-meta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.2rem !important; /* Reduced gap between meta items */
+  margin-top: 0.15rem !important; /* Reduced space above meta */
+  line-height: 0 !important; /* Tighter line spacing */
+}
+
+/* Additional tight styling for publication details */
+#main #publications-root .publication-abstract {
+  margin: 0.25rem 0 !important;  /* Smaller margin */
+  line-height: 1.2 !important;   /* Tighter line spacing */
+}
+
+#main #publications-root .publication-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important; /* Align header elements in center */
+  gap: 0.25rem !important; /* Reduced gap between header elements */
+  margin: 0 !important;
+  line-height: 1.3 !important; /* Tighter line spacing */
+}
+
+#main #publications-root .publication-link {
+  font-size: 0.8rem !important; /* Slightly larger font size for links */
+  padding: 0.1rem 0.2rem !important; /* Reduced padding for links */
+  border-radius: 0.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.1rem !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 1 !important; /* Tighter line spacing */
+}
+
+#main #publications-root .publication-link:hover {
+  border-bottom: none !important;
+  color: inherit !important;
+  
+}
+.publication-image {
+  width: 50%;
+  margin: 1rem auto;  /* Centers horizontally and maintains top margin */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: block;  /* Ensures it behaves as a block element for centering */
+}
+
+.publication-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.publication-year {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  line-height: 0;
+  opacity: 1 !important;  /* Force visibility */
+  display: block !important;  /* Ensure it's always displayed */
+  visibility: visible !important;  /* Make sure it's not hidden */
+}
+
+#main #publications-root .download-button {
+  font-size: 0.7rem !important;
+  padding: 0.15rem 0.15rem !important;
+  border-radius: 0.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.15rem !important;
+  background: #df0b0b !important;
+  color: white !important;
+  cursor: pointer !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: none !important;
+  min-height: 0 !important; /* No min-height */
+  max-height: 1rem !important; /* Restrict max height */
+  vertical-align: middle !important; /* Align text properly */
+  overflow: hidden !important; /* Prevent content overflow */
+  line-height: 1 !important; /* Tighter line spacing */
+}
+
+/* Utility classes */
+#main #publications-root .pdf { 
+  background-color: #df0b0b !important;  /* Lighter red */
+  color: #ffffff !important;  /* Darker red for better contrast */
+  min-height: 0 !important; /* No min-height */
+  max-height: 1rem !important; /* Restrict max height */
+  
+}
+
+#main #publications-root .data { 
+  background-color: #406451 !important;  /* Lighter green */
+  color: #ffffff !important;  /* Darker green for better contrast */
+  min-height: 0 !important; /* No min-height */
+  max-height: 1rem !important; /* Restrict max height */
+}
+
+#main #publications-root .code { 
+  background-color: #7f07ff !important;  /* Lighter purple */
+  color: #ffffff !important;  /* Darker purple for better contrast */
+  min-height: 0 !important; /* No min-height */
+  max-height: 1rem !important; /* Restrict max height */
+}
+
+/* Preregistration (pre-reg) color */
+#main #publications-root .preregistration { 
+  background-color: #fa07d1 !important;  /* Light cyan for a formal, calm feel */
+  color: #ffffff !important;  /* Dark teal text for good contrast */
+  min-height: 0 !important; /* No min-height */
+  max-height: 1rem !important; /* Restrict max height */
+}
+
+/* Open Code */
+#main #publications-root .open-code { 
+  background-color: #5A9BD6 !important;  /* Light blue */
+  color: #ffffff !important;  /* White for contrast */
+  min-height: 0 !important; 
+  max-height: 1rem !important; 
+}
+
+/* Corrigendum */
+#main #publications-root .corrigendum { 
+  background-color: #F39C12 !important;  /* Orange for alerts */
+  color: #ffffff !important;  
+  min-height: 0 !important; 
+  max-height: 1rem !important; 
+}
+
+/* Jupyter Notebook */
+#main #publications-root .jupyter-notebook { 
+  background-color: #DA524C !important;  /* Reddish tone for Jupyter */
+  color: #ffffff !important;  
+  min-height: 0 !important; 
+  max-height: 1rem !important; 
+}
+
+/* Dashboard */
+#main #publications-root .dashboard { 
+  background-color: #cc632e !important;  /* Green for analytics */
+  color: #ffffff !important;  
+  min-height: 0 !important; 
+  max-height: 1rem !important; 
+}
+
+#main #publications-root .theme-button {
+  padding: 0.1rem 0.3rem !important;  /* Reduce padding */
+  font-size: 1.2rem !important;       /* Smaller text size */
+  border-radius: 0.2rem !important;   /* Slightly rounder corners */
+  background: #e5e7eb !important;     /* Light background */
+  color: #374151 !important;          /* Darker text for readability */
+  cursor: pointer !important;
+  line-height: 1 !important;
+}
+
+/* Correctly target the theme tags within the publication-themes container */
+#main #publications-root .publication-themes {
+  display: flex !important;           /* Align theme buttons horizontally */
+  flex-wrap: wrap !important;         /* Allow wrapping to next line if necessary */
+  gap: 0.3rem !important;            /* Space between the buttons */
+  margin-top: 0.5rem !important;     /* Space above the theme section */
+}
+
+/* Ensure correct styling for the theme-tag buttons inside the publication-themes container */
+#main #publications-root .publication-themes .theme-tag {
+  padding: 0.2rem 0.4rem !important;
+  font-size: 0.7rem !important;
+  border-radius: 0.25rem !important;
+  border: none !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  background: #f3f4f6 !important;
+  color: #4b5563 !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  letter-spacing: normal !important;
+  height: auto !important;
+}
+
+/* Hover effect for theme tags */
+#main #publications-root .publication-themes .theme-tag:hover {
+  background-color: #3b82f6 !important; /* Blue background on hover */
+  color: white !important;              /* White text on hover */
+  border-color: #3b82f6 !important;     /* Blue border on hover */
+}
+
+/* Selected state for the theme tags */
+#main #publications-root .publication-themes .theme-tag.selected {
+  background-color: #3b82f6 !important; /* Blue background when selected */
+  color: white !important;              /* White text for selected tag */
+  border-color: #3b82f6 !important;     /* Blue border when selected */
+}

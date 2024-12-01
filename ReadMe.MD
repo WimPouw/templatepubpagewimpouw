@@ -1,6 +1,5 @@
-<div class="gif-container">
-  <img src="assets/gifs/pubpagewp.gif" alt="Publication Page GIF">
-</div>
+<img src="assets/gifs/pubpagewp.gif" alt="Publication Page GIF">
+
 
 # Website Wim Pouw copy 1-12-2024
 Here is a copy of Wim Pouw's pub page and the js and .css scripts needed. I put this online so people can borrow the website mechanics for their publication pages.

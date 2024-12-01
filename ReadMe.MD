@@ -1,4 +1,4 @@
-<img src="assets/gifs/pubpagewp.gif" alt="Publication Page GIF">
+<img src="gifs/pubpagewp.gif" alt="Publication Page GIF">
 
 
 # Website Wim Pouw copy 1-12-2024

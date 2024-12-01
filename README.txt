@@ -8,7 +8,7 @@ I learned to build my own website through this tutorial: https://www.youtube.com
 The publications html just has the frame of the page, containing proper linking to the assets/js/publist.js and the css styles (a main style from a template I use, and a specific pubsearch.css that I use for the easthethics of the publication cards.
 
 # How to adjust my page
-Super simple. You just change the themes list and the  "publication cards" in the js assets/js/publist.js. The cards are in const publications and the themes are in the "const themes".
+Super simple. You just change the themes list and the  "publication cards" in the js assets/js/publist.js. The cards are in "const publications" and the themes are in the "const themes". Just control+F these terms and youll figure it out by tinkeering with the content.
 
 Questions
 wim.pouw@donders.ru.nl

@@ -1,12 +1,12 @@
 <div class="gif-container">
-  <img src="path/to/pubpagewp.gif" alt="Publication Page GIF">
+  <img src="assets/gifs/pubpagewp.gif" alt="Publication Page GIF">
 </div>
 
 # Website Wim Pouw copy 1-12-2024
 Here is a copy of Wim Pouw's pub page and the js and .css scripts needed. I put this online so people can borrow the website mechanics for their publication pages.
 
 # Prerequisites
-I learned to build my own website through this tutorial: https://www.youtube.com/watch?v=C5QFHp1oAws
+I learned the basics for setting up a website with html5 and css through this tutorial: https://www.youtube.com/watch?v=C5QFHp1oAws
 
 # Quick overview
 The publications html just has the frame of the page, containing proper linking to the assets/js/publist.js and the css styles (a main style from a template I use, and a specific pubsearch.css that I use for the easthethics of the publication cards.

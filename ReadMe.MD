@@ -1,5 +1,7 @@
 <img src="gifs/pubpagewp.gif" alt="Publication Page GIF">
 
+# Website add-on Collaboration page 1-12-2024
+Check out collaborate.html + collaborate.js + collaborate.css
 
 # Website Wim Pouw copy 1-12-2024
 Here is a copy of Wim Pouw's pub page and the js and .css scripts needed. I put this online so people can borrow the website mechanics for their publication pages.

@@ -1,0 +1,696 @@
+/* Project leads styling in modal */
+.modal-project-leads {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-project-leads h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1e40af;
+  display: flex;
+  align-items: center;
+}
+
+.modal-project-leads h3::before {
+  content: "\f2bd"; /* FontAwesome user-circle icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+.project-lead-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #f0f7ff; /* Slightly different background than collaborators */
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+.project-lead-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-leads-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.lead-img {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.75rem;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lead-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.lead-info {
+  flex: 1;
+  min-width: 0;
+  overflow: visible; /* FIXED: Changed from hidden to visible */
+}
+
+.lead-info h4 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+  color: #1e40af;
+  font-weight: 600;
+  /* FIXED: Removed white-space: nowrap, overflow: hidden, text-overflow: ellipsis */
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+.lead-info p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #4b5563;
+  white-space: normal;
+  word-wrap: break-word;
+  max-height: none;
+}
+
+/* Profile link widget styling */
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  background-color: #f0f7ff;
+  border-radius: 20px;
+  color: #3b82f6;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #e1effe;
+}
+
+.profile-link:hover {
+  background-color: #dbeafe;
+  color: #2563eb;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.profile-link i {
+  margin-right: 0.3rem;
+}
+
+.profile-icon {
+  margin-right: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.collaborator-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* collaborate.css - With collaborator styling */
+
+/* Grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Card styling */
+.project-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Image styling - smaller by default */
+.thumbnail-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+  margin-bottom: 0.75rem;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Text styling */
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #1e40af;
+  line-height: 1.2;
+}
+
+.project-card p {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+  margin: 0;
+  /* Limit the height to show truncated text in cards */
+  max-height: 4.2em; /* 3 lines of text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Tags styling */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  gap: 0.25rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.15rem 0.3rem;
+  background-color: #eef2ff;
+  color: #3b82f6;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Card button */
+.card-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #2563eb;
+}
+
+/* Section divider */
+.section-divider {
+  margin: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modal styling for expanded cards */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 900px;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-height: 800px) {
+  .modal-content {
+    max-height: 80vh; /* Slightly smaller on taller screens for better proportions */
+  }
+  
+  .modal-image-container,
+  .modal-image {
+    max-height: 35vh; /* Relatively smaller image on taller screens */
+  }
+  
+  .modal-text-container {
+    max-height: calc(80vh - 35vh); /* Adjusted text container */
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.close-button:hover {
+  color: #111827;
+}
+
+.modal-image-container {
+  width: 100%;
+  max-height: 40vh; /* Reduced from 50vh to 40vh */
+  overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 40vh; /* Reduced from 50vh to 40vh */
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: block;
+}
+
+.modal-text-container {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(90vh - 40vh); /* Adjusted to match the new image height */
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #1e40af;
+}
+
+.modal-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 1rem 0;
+  /* No height limit in expanded view */
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+/* Collaborators styling in cards */
+.collaborators-preview {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  position: relative;
+  margin-left: 5px; /* Added left margin to offset negative right margin */
+}
+
+.collaborator-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: -10px; /* Overlap avatars */
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Increase z-index for hover effect */
+.collaborator-avatar:hover {
+  z-index: 5;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.collaborator-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collaborator-count {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  margin-left: 5px;
+}
+
+/* Collaborators styling in modal */
+.modal-collaborators {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.modal-collaborators h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1e40af;
+  display: flex;
+  align-items: center;
+}
+
+.modal-collaborators h3::before {
+  content: "\f0c0"; /* FontAwesome users icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+.collaborator-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  margin-top: 0.35rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.collaborator-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.collaborators-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.collaborator-card {
+  display: flex;
+  align-items: flex-start; /* Changed from center to flex-start for better text alignment with longer descriptions */
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.collaborator-info {
+  flex: 1; /* Take up remaining space */
+  min-width: 0; /* Allow text to truncate if needed */
+  overflow: visible; /* FIXED: Changed from hidden to visible */
+}
+
+.collaborator-img {
+  flex: 0 0 60px; /* Fixed width, don't shrink or grow */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.75rem;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.collaborator-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden; /* Helps with rendering in webkit browsers */
+  backface-visibility: hidden;
+}
+
+.collaborator-info h4 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+  color: #1e40af;
+  font-weight: 600;
+  /* FIXED: Removed white-space: nowrap, overflow: hidden, text-overflow: ellipsis */
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+.collaborator-info p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #6b7280;
+  white-space: normal;
+  word-wrap: break-word;
+  /* Allow more text to fit */
+  max-height: none;
+}
+
+/* Adding a subtle indicator to show cards are clickable */
+.project-card::after {
+  content: "⤢";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1rem;
+  color: #3b82f6;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 1rem;
+  }
+  
+  .thumbnail-image {
+    height: 100px;
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+  
+  .collaborators-list {
+    grid-template-columns: 1fr !important; /* Force single column on mobile */
+  }
+  
+  .collaborator-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Quick Navigation Widget */
+.quick-nav-container {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-left: 4px solid #205bbb;
+}
+
+.quick-nav-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.quick-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quick-nav-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  background-color: #f0f7ff;
+  border-radius: 20px;
+  color: #0c0d0e;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid #e1effe;
+}
+
+.quick-nav-button:hover {
+  background-color: #dbeafe;
+  color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.quick-nav-button i {
+  margin-right: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Section styles */
+.content-section {
+  margin-bottom: 2.5rem;
+  padding-top: 1rem;
+}
+
+.content-section h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.section-icon {
+  color: #050505;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Make sections more compact */
+.intro-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.content-section p {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Return to top button */
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  display: none; /* Hidden by default, will be shown with JS */
+}
+
+.to-top-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.to-top-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Additional compact styling adjustments */
+.project-grid {
+  gap: 1.25rem; /* Reduced from 1.5rem */
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
+}
+
+.project-card {
+  padding: 0.85rem; /* Reduced from 1rem */
+}
+
+.thumbnail-image {
+  height: 110px; /* Reduced from 120px */
+  margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+}
+
+.section-divider {
+  margin: 2rem 0; /* Reduced from 3rem */
+}
+
+@media (max-width: 768px) {
+  .quick-nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .quick-nav-title {
+    margin-bottom: 0.5rem;
+  }
+  
+  .quick-nav-buttons {
+    width: 100%;
+  }
+  
+  .thumbnail-image {
+    height: 90px; /* Reduced from 100px for mobile */
+  }
+}
